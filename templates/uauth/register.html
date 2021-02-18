@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block titile %}Register{% endblock %}
+
+{% block content %}
+<form method="POST">
+	{% csrf_token %}
+	<div class="row mx-auto">
+		<div class="col-4 mx-auto">
+			<h1 class="h3 mb-3 fw-normal text-center">Please Register</h1>
+			{{ form.as_p }}
+
+			<button type="submit" class="w-100 btn btn-lg btn-primary mb-4">Register</button><br>
+			<small>Sizning Akkountingiz mavjud bo'lsa <a href="{% url 'login' %}">Accountga
+					kirish</a></small>
+		</div>
+	</div>
+</form>
+</main>
+{% endblock %}
